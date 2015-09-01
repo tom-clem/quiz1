@@ -8,5 +8,7 @@
  * extension
  */
 module.exports = function fileExtension(name) {
-
+var period = name.lastIndexOf('.');
+if (period ===-1) {return false;} // === checkt genauer ob der Ausdruck stimmt mit string oder int ...
+return name.substr(period + 1);
 };
